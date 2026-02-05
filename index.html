@@ -33,7 +33,7 @@ header {
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     letter-spacing: 3px;
 }
 
@@ -47,6 +47,7 @@ header p {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.95rem;
 }
 
 /* Main Content */
@@ -56,13 +57,14 @@ main {
     padding: 40px 20px 80px;
 }
 
-/* Car Cards */
+/* Car Grid */
 .car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
+/* Car Card */
 .car-card {
     background: var(--card-bg);
     border-radius: 16px;
@@ -87,15 +89,15 @@ main {
 }
 
 .car-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
 }
 
 .section-title {
-    margin-top: 20px;
+    margin-top: 18px;
     margin-bottom: 8px;
     color: var(--accent);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -118,6 +120,16 @@ footer {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
+
+/* Mobile polish */
+@media (max-width: 480px) {
+    .car-image img {
+        height: 200px;
+    }
+    header {
+        padding: 40px 15px;
+    }
+}
 </style>
 </head>
 
@@ -126,96 +138,96 @@ footer {
 <header>
     <h1>G9RDV <span>Automotive</span></h1>
     <p>
-        Precision automotive data and enthusiast-focused insights.
-        Showcasing performance, platforms, and design heritage of iconic vehicles.
+        Performance data, platform insight, and enthusiast-focused vehicle showcases.
+        Built for drivers who care about the details.
     </p>
 </header>
 
 <main>
-    <section class="car-grid">
+<section class="car-grid">
 
-        <!-- Mercedes -->
-        <div class="car-card">
-            <div class="car-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mercedes-Benz_E_220d_T-Modell_AMG_Line_%28S_213%29_IMG_3791.jpg" alt="Mercedes E220d Estate">
-            </div>
-            <div class="car-content">
-                <h2>2013 Mercedes-Benz E220d Estate</h2>
-
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>Engine: 2.1L Turbo Diesel (OM651)</li>
-                    <li>Power: ~170 hp</li>
-                    <li>Torque: ~400 Nm</li>
-                    <li>0–60 mph: ~8.4 seconds</li>
-                    <li>Top Speed: ~140 mph</li>
-                </ul>
-
-                <div class="section-title">Platform & Drivetrain</div>
-                <ul>
-                    <li>Platform: Mercedes-Benz W212</li>
-                    <li>Drivetrain: RWD</li>
-                    <li>Transmission: 7-Speed Automatic</li>
-                    <li>Body Style: Estate (Wagon)</li>
-                </ul>
-            </div>
+    <!-- Mercedes -->
+    <div class="car-card">
+        <div class="car-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mercedes-Benz_E_220d_T-Modell_AMG_Line_%28S_213%29_IMG_3791.jpg" alt="Mercedes E220d Estate">
         </div>
+        <div class="car-content">
+            <h2>2013 Mercedes-Benz E220d Estate</h2>
 
-        <!-- Corolla Levin -->
-        <div class="car-card">
-            <div class="car-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Toyota_Corolla_Levin_BZ-R_AE111.jpg" alt="Toyota Corolla Levin BZ-R">
-            </div>
-            <div class="car-content">
-                <h2>1997 Toyota Corolla Levin BZ-R</h2>
+            <div class="section-title">Performance</div>
+            <ul>
+                <li>Engine: 2.1L Turbo Diesel (OM651)</li>
+                <li>Power: ~170 hp</li>
+                <li>Torque: ~400 Nm</li>
+                <li>0–60 mph: ~8.4 seconds</li>
+                <li>Top Speed: ~140 mph</li>
+            </ul>
 
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>Engine: 1.6L 4A-GE 20V</li>
-                    <li>Power: ~165 hp</li>
-                    <li>Redline: 8,000 rpm</li>
-                    <li>0–60 mph: ~6.5 seconds</li>
-                    <li>Top Speed: ~140 mph</li>
-                </ul>
-
-                <div class="section-title">Platform & Drivetrain</div>
-                <ul>
-                    <li>Platform: AE111</li>
-                    <li>Drivetrain: FWD</li>
-                    <li>Transmission: 6-Speed Manual</li>
-                    <li>Body Style: Coupe</li>
-                </ul>
-            </div>
+            <div class="section-title">Platform & Drivetrain</div>
+            <ul>
+                <li>Platform: Mercedes-Benz W212</li>
+                <li>Drivetrain: RWD</li>
+                <li>Transmission: 7-Speed Automatic</li>
+                <li>Body Style: Estate</li>
+            </ul>
         </div>
+    </div>
 
-        <!-- Astra -->
-        <div class="car-card">
-            <div class="car-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Vauxhall_Astra_G_GSi.jpg" alt="Vauxhall Astra GSi">
-            </div>
-            <div class="car-content">
-                <h2>2003 Vauxhall Astra GSi</h2>
-
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>Engine: 2.0L NA (Z20LET)</li>
-                    <li>Power: ~200 hp</li>
-                    <li>Torque: ~250 Nm</li>
-                    <li>0–60 mph: ~7.0 seconds</li>
-                    <li>Top Speed: ~150 mph</li>
-                </ul>
-
-                <div class="section-title">Platform & Drivetrain</div>
-                <ul>
-                    <li>Platform: Astra G</li>
-                    <li>Drivetrain: FWD</li>
-                    <li>Transmission: 6-Speed Manual</li>
-                    <li>Body Style: Hatchback</li>
-                </ul>
-            </div>
+    <!-- Corolla -->
+    <div class="car-card">
+        <div class="car-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Toyota_Corolla_Levin_BZ-R_AE111.jpg" alt="Toyota Corolla Levin BZ-R">
         </div>
+        <div class="car-content">
+            <h2>1997 Toyota Corolla Levin BZ-R</h2>
 
-    </section>
+            <div class="section-title">Performance</div>
+            <ul>
+                <li>Engine: 1.6L 4A-GE 20V</li>
+                <li>Power: ~165 hp</li>
+                <li>Redline: 8,000 rpm</li>
+                <li>0–60 mph: ~6.5 seconds</li>
+                <li>Top Speed: ~140 mph</li>
+            </ul>
+
+            <div class="section-title">Platform & Drivetrain</div>
+            <ul>
+                <li>Platform: AE111</li>
+                <li>Drivetrain: FWD</li>
+                <li>Transmission: 6-Speed Manual</li>
+                <li>Body Style: Coupe</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Astra -->
+    <div class="car-card">
+        <div class="car-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Vauxhall_Astra_G_GSi.jpg" alt="Vauxhall Astra GSi">
+        </div>
+        <div class="car-content">
+            <h2>2003 Vauxhall Astra GSi</h2>
+
+            <div class="section-title">Performance</div>
+            <ul>
+                <li>Engine: 2.0L Z20LET</li>
+                <li>Power: ~200 hp</li>
+                <li>Torque: ~250 Nm</li>
+                <li>0–60 mph: ~7.0 seconds</li>
+                <li>Top Speed: ~150 mph</li>
+            </ul>
+
+            <div class="section-title">Platform & Drivetrain</div>
+            <ul>
+                <li>Platform: Astra G</li>
+                <li>Drivetrain: FWD</li>
+                <li>Transmission: 6-Speed Manual</li>
+                <li>Body Style: Hatchback</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
 </main>
 
 <footer>
@@ -224,4 +236,3 @@ footer {
 
 </body>
 </html>
-
