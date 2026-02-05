@@ -3,142 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>G9RDV Automotive</title>
-
-<!-- Luxury Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #0b0b0b;
-    --card: #141414;
+    --bg: #0a0a0a;
+    --panel: #111;
     --gold: #c9a24d;
-    --text: #f2f2f2;
-    --muted: #b8b8b8;
+    --text: #f3f3f3;
+    --muted: #b9b9b9;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* APTOS-FIRST FONT STACK */
 body {
-    background: radial-gradient(circle at top, #121212, #080808);
+    background: radial-gradient(circle at top, #121212, #070707);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    font-family: "Aptos", "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
 }
 
-/* Header */
+/* HEADER */
 header {
-    padding: 80px 20px 60px;
+    padding: 90px 20px 70px;
     text-align: center;
 }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 6vw, 3.8rem);
+.brand {
+    font-size: clamp(3rem, 6vw, 4.2rem);
+    font-weight: 600;
     letter-spacing: 6px;
 }
 
-.logo span {
+.brand span {
     color: var(--gold);
 }
 
-.tagline {
-    margin-top: 15px;
+.subtitle {
+    margin-top: 18px;
     color: var(--muted);
-    font-size: 0.95rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    font-size: 0.95rem;
 }
 
-/* Layout */
+/* MAIN */
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
-    padding: 40px 20px 100px;
+    padding-bottom: 120px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+/* VEHICLE SECTION */
+.vehicle {
+    margin-bottom: 120px;
 }
 
-/* Cards */
-.card {
-    background: linear-gradient(180deg, #161616, #101010);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 35px 80px rgba(0,0,0,0.8);
-}
-
-.card img {
+.vehicle img {
     width: 100%;
-    height: 230px;
+    height: 520px;
     object-fit: cover;
     display: block;
 }
 
-/* Content */
-.content {
-    padding: 28px;
+/* CONTENT */
+.vehicle-content {
+    background: linear-gradient(180deg, #121212, #0c0c0c);
+    padding: 60px 60px 70px;
 }
 
-.content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+.vehicle h2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
-.section {
-    margin-top: 18px;
+/* BROCHURE GRID */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
-.section-title {
+.spec-block h3 {
     color: var(--gold);
-    font-size: 0.75rem;
-    letter-spacing: 2px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
 }
 
-ul {
-    list-style: none;
-}
-
-li {
-    font-size: 0.9rem;
+.spec {
+    font-size: 1.05rem;
     color: var(--muted);
+    margin-bottom: 8px;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-    border-top: 1px solid #1e1e1e;
-    padding: 30px 20px;
+    border-top: 1px solid #1c1c1c;
     text-align: center;
+    padding: 40px 20px;
     color: var(--muted);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
-/* Mobile polish */
-@media (max-width: 480px) {
-    header {
-        padding: 60px 15px 40px;
+/* MOBILE */
+@media (max-width: 768px) {
+    .vehicle img {
+        height: 320px;
     }
-    .card img {
-        height: 200px;
+
+    .vehicle-content {
+        padding: 40px 25px;
+    }
+
+    .vehicle h2 {
+        font-size: 2rem;
     }
 }
 </style>
@@ -147,103 +133,92 @@ footer {
 <body>
 
 <header>
-    <div class="logo">G9RDV <span>Automotive</span></div>
-    <div class="tagline">Luxury • Performance • Engineering</div>
+    <div class="brand">G9RDV <span>Automotive</span></div>
+    <div class="subtitle">Luxury • Engineering • Performance</div>
 </header>
 
 <main>
-<section class="grid">
 
-    <!-- Mercedes -->
-    <div class="card">
-        <img loading="lazy"
-             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mercedes-Benz_E_220d_T-Modell_AMG_Line_%28S_213%29_IMG_3791.jpg"
-             alt="Mercedes E220d Estate">
-        <div class="content">
-            <h2>2013 Mercedes-Benz E220d Estate</h2>
+<!-- MERCEDES -->
+<section class="vehicle">
+    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1d?auto=format&fit=crop&w=1600&q=80" alt="Mercedes Estate">
+    <div class="vehicle-content">
+        <h2>2013 Mercedes-Benz E220d Estate</h2>
 
-            <div class="section">
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>2.1L Turbo Diesel (OM651)</li>
-                    <li>170 hp • 400 Nm</li>
-                    <li>0–60 mph ~8.4s</li>
-                    <li>Top speed ~140 mph</li>
-                </ul>
+        <div class="spec-grid">
+            <div class="spec-block">
+                <h3>Performance</h3>
+                <div class="spec">2.1L Turbo Diesel (OM651)</div>
+                <div class="spec">170 hp • 400 Nm</div>
+                <div class="spec">0–60 mph ~8.4s</div>
+                <div class="spec">Top Speed ~140 mph</div>
             </div>
 
-            <div class="section">
-                <div class="section-title">Platform</div>
-                <ul>
-                    <li>W212 • Rear-Wheel Drive</li>
-                    <li>7-Speed Automatic</li>
-                    <li>Estate Body</li>
-                </ul>
+            <div class="spec-block">
+                <h3>Platform</h3>
+                <div class="spec">W212 Architecture</div>
+                <div class="spec">Rear-Wheel Drive</div>
+                <div class="spec">7-Speed Automatic</div>
+                <div class="spec">Estate Body</div>
             </div>
         </div>
     </div>
-
-    <!-- Corolla -->
-    <div class="card">
-        <img loading="lazy"
-             src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Toyota_Corolla_Levin_BZ-R_AE111.jpg"
-             alt="Toyota Corolla Levin BZ-R">
-        <div class="content">
-            <h2>1997 Toyota Corolla Levin BZ-R</h2>
-
-            <div class="section">
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>1.6L 4A-GE 20V</li>
-                    <li>165 hp • 8,000 rpm</li>
-                    <li>0–60 mph ~6.5s</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Platform</div>
-                <ul>
-                    <li>AE111 • Front-Wheel Drive</li>
-                    <li>6-Speed Manual</li>
-                    <li>Coupe Body</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Astra -->
-    <div class="card">
-        <img loading="lazy"
-             src="https://upload.wikimedia.org/wikipedia/commons/1/18/Vauxhall_Astra_G_GSi.jpg"
-             alt="Vauxhall Astra GSi">
-        <div class="content">
-            <h2>2003 Vauxhall Astra GSi</h2>
-
-            <div class="section">
-                <div class="section-title">Performance</div>
-                <ul>
-                    <li>2.0L Z20LET</li>
-                    <li>200 hp • 250 Nm</li>
-                    <li>0–60 mph ~7.0s</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Platform</div>
-                <ul>
-                    <li>Astra G • Front-Wheel Drive</li>
-                    <li>6-Speed Manual</li>
-                    <li>Hatchback Body</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
 </section>
+
+<!-- COROLLA -->
+<section class="vehicle">
+    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=1600&q=80" alt="Toyota Levin">
+    <div class="vehicle-content">
+        <h2>1997 Toyota Corolla Levin BZ-R</h2>
+
+        <div class="spec-grid">
+            <div class="spec-block">
+                <h3>Performance</h3>
+                <div class="spec">1.6L 4A-GE 20V</div>
+                <div class="spec">165 hp @ 8,000 rpm</div>
+                <div class="spec">0–60 mph ~6.5s</div>
+            </div>
+
+            <div class="spec-block">
+                <h3>Platform</h3>
+                <div class="spec">AE111 Chassis</div>
+                <div class="spec">Front-Wheel Drive</div>
+                <div class="spec">6-Speed Manual</div>
+                <div class="spec">Coupe Body</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ASTRA -->
+<section class="vehicle">
+    <img src="https://images.unsplash.com/photo-1628519592419-bf288f08cef9?auto=format&fit=crop&w=1600&q=80" alt="Astra GSI">
+    <div class="vehicle-content">
+        <h2>2003 Vauxhall Astra GSi</h2>
+
+        <div class="spec-grid">
+            <div class="spec-block">
+                <h3>Performance</h3>
+                <div class="spec">2.0L Z20LET</div>
+                <div class="spec">200 hp • 250 Nm</div>
+                <div class="spec">0–60 mph ~7.0s</div>
+            </div>
+
+            <div class="spec-block">
+                <h3>Platform</h3>
+                <div class="spec">Astra G Platform</div>
+                <div class="spec">Front-Wheel Drive</div>
+                <div class="spec">6-Speed Manual</div>
+                <div class="spec">Hot Hatch</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <footer>
-    © 2026 G9RDV Automotive — Crafted for Enthusiasts
+    © 2026 G9RDV Automotive — Designed as a Digital Brochure
 </footer>
 
 </body>
