@@ -58,14 +58,15 @@ main {
     padding-bottom: 120px;
 }
 
-/* VEHICLE */
+/* VEHICLE DISPLAY */
 .vehicle {
-    margin-bottom: 120px;
+    margin-bottom: 140px;
 }
 
 .vehicle img {
     width: 100%;
-    height: 520px;
+    height: auto;
+    max-height: 540px;
     object-fit: cover;
     display: block;
     background: #000;
@@ -78,13 +79,14 @@ main {
 
 .vehicle h2 {
     font-size: 2.6rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .spec-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
+    margin-top: 30px;
 }
 
 .spec-block h3 {
@@ -92,13 +94,13 @@ main {
     font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .spec {
     font-size: 1.05rem;
     color: var(--muted);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 /* FOOTER */
@@ -112,92 +114,118 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .vehicle img {
-        height: 320px;
-    }
     .vehicle-content {
-        padding: 40px 25px;
+        padding: 40px 20px;
     }
     .vehicle h2 {
         font-size: 2rem;
     }
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
     <div class="brand">G9RDV <span>Automotive</span></div>
-    <div class="subtitle">Luxury • Engineering • Performance</div>
+    <div class="subtitle">Luxury • Performance • Market Value Profiles</div>
 </header>
 
 <main>
 
-<!-- MERCEDES -->
+<!-- MERCEDES E220d -->
 <section class="vehicle">
-    <img src="https://via.placeholder.com/1600x520/111111/FFFFFF?text=Mercedes+E220d+Estate"
-         alt="2013 Mercedes-Benz E220d Estate">
+    <img src="https://via.placeholder.com/1600x540/111111/FFFFFF?text=2013+Mercedes+E220d+Estate" alt="2013 Mercedes E220d Estate">
     <div class="vehicle-content">
-        <h2>2013 Mercedes-Benz E220d Estate</h2>
+        <h2>2013 Mercedes‑Benz E220d Estate</h2>
+
         <div class="spec-grid">
             <div class="spec-block">
                 <h3>Performance</h3>
-                <div class="spec">2.1L Turbo Diesel</div>
-                <div class="spec">170 hp • 400 Nm</div>
-                <div class="spec">0–60 mph ~8.4s</div>
+                <div class="spec">Engine: 2.1 L Turbo Diesel</div>
+                <div class="spec">Power: ~170 hp (125 kW)</div>
+                <div class="spec">Torque: ~400 Nm</div>
+                <div class="spec">0–60 mph: ~8.4 s</div>
+                <div class="spec">Transmission: Automatic</div>
+                <div class="spec">Drivetrain: Rear‑wheel drive</div>
             </div>
             <div class="spec-block">
-                <h3>Platform</h3>
-                <div class="spec">W212 • RWD</div>
-                <div class="spec">7-Speed Automatic</div>
-                <div class="spec">Estate</div>
+                <h3>Platform & Body</h3>
+                <div class="spec">Model: W212 E‑Class</div>
+                <div class="spec">Body Style: Estate (wagon)</div>
+                <div class="spec">Fuel Type: Diesel</div>
+                <div class="spec">Economy: ~51–57 mpg UK</div>
+            </div>
+            <div class="spec-block">
+                <h3>Market Value (UK Used)</h3>
+                <div class="spec">Typical Range: £4,000 – £9,500 (varies with mileage) :contentReference[oaicite:1]{index=1}</div>
+                <div class="spec">Fair Dealer Price: ~£5,500 – £6,500 :contentReference[oaicite:2]{index=2}</div>
+                <div class="spec">Original OTR Price: ~£34,310+ (2013) :contentReference[oaicite:3]{index=3}</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- COROLLA -->
+<!-- TOYOTA COROLLA LEVIN -->
 <section class="vehicle">
-    <img src="https://via.placeholder.com/1600x520/111111/FFFFFF?text=Toyota+Corolla+Levin+BZ-R"
-         alt="1997 Toyota Corolla Levin BZ-R">
+    <img src="https://via.placeholder.com/1600x540/111111/FFFFFF?text=1997+Toyota+Corolla+Levin+BZ-R" alt="1997 Toyota Corolla Levin BZ-R">
     <div class="vehicle-content">
-        <h2>1997 Toyota Corolla Levin BZ-R</h2>
+        <h2>1997 Toyota Corolla Levin BZ‑R</h2>
+
         <div class="spec-grid">
             <div class="spec-block">
                 <h3>Performance</h3>
-                <div class="spec">1.6L 4A-GE 20V</div>
-                <div class="spec">165 hp @ 8,000 rpm</div>
-                <div class="spec">0–60 mph ~6.5s</div>
+                <div class="spec">Engine: 1.6 L 4A‑GE DOHC 20‑valve</div>
+                <div class="spec">Power: 165 PS (~121 kW) @ 7,800 rpm</div>
+                <div class="spec">Torque: ~161 Nm @ 5,600 rpm</div>
+                <div class="spec">Transmission: 6‑Speed Manual</div>
+                <div class="spec">Drivetrain: Front‑wheel drive</div>
             </div>
             <div class="spec-block">
-                <h3>Platform</h3>
-                <div class="spec">AE111 • FWD</div>
-                <div class="spec">6-Speed Manual</div>
-                <div class="spec">Coupe</div>
+                <h3>Platform & Body</h3>
+                <div class="spec">Chassis: AE111</div>
+                <div class="spec">Body Style: Coupe</div>
+                <div class="spec">Weight: ~1080 kg</div>
+                <div class="spec">Dimensions: 4305×1695×1305 mm</div>
+                <div class="spec">Fuel Tank: 50 L</div>
+            </div>
+            <div class="spec-block">
+                <h3>Market Value (Indicative)</h3>
+                <div class="spec">Originally new: ~¥1,890,000 (~£11,000–£13,000) :contentReference[oaicite:4]{index=4}</div>
+                <div class="spec">Current UK import/classic prices vary significantly with condition</div>
+                <div class="spec">Collector interest often pushes prices above typical used levels</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ASTRA -->
+<!-- VAUXHALL ASTRA GSi -->
 <section class="vehicle">
-    <img src="https://via.placeholder.com/1600x520/111111/FFFFFF?text=Vauxhall+Astra+GSi"
-         alt="2003 Vauxhall Astra GSi">
+    <img src="https://via.placeholder.com/1600x540/111111/FFFFFF?text=2003+Vauxhall+Astra+GSi" alt="2003 Vauxhall Astra GSi">
     <div class="vehicle-content">
         <h2>2003 Vauxhall Astra GSi</h2>
+
         <div class="spec-grid">
             <div class="spec-block">
                 <h3>Performance</h3>
-                <div class="spec">2.0L Turbo</div>
-                <div class="spec">200 hp • 250 Nm</div>
-                <div class="spec">0–60 mph ~7.0s</div>
+                <div class="spec">Engine: 2.0 L Z20LET Turbo</div>
+                <div class="spec">Power: ~196 bhp</div>
+                <div class="spec">Torque: ~250 Nm</div>
+                <div class="spec">0–60 mph: ~7.0 s (est)</div>
+                <div class="spec">Transmission: 6‑Speed Manual</div>
+                <div class="spec">Drivetrain: Front‑wheel drive</div>
             </div>
             <div class="spec-block">
-                <h3>Platform</h3>
-                <div class="spec">Astra G • FWD</div>
-                <div class="spec">6-Speed Manual</div>
-                <div class="spec">Hot Hatch</div>
+                <h3>Platform & Body</h3>
+                <div class="spec">Platform: Astra G</div>
+                <div class="spec">Body Style: 3‑door Hatchback</div>
+                <div class="spec">Fuel Type: Petrol</div>
+            </div>
+            <div class="spec-block">
+                <h3>Market Value (UK Used)</h3>
+                <div class="spec">Typical used listings: ~£6,000–£8,000</div>
+                <div class="spec">Enthusiast pricing varies with condition & mileage</div>
+                <div class="spec">Values heavily dependent on service history</div>
             </div>
         </div>
     </div>
@@ -206,7 +234,7 @@ footer {
 </main>
 
 <footer>
-    © 2026 G9RDV Automotive
+    © 2026 G9RDV Automotive — Detailed Automotive Profiles
 </footer>
 
 </body>
