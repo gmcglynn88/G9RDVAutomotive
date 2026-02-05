@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G9RDV Automotive</title>
+
+<style>
+:root {
+    --bg-dark: #0e0e0e;
+    --card-bg: #171717;
+    --accent: #d4af37;
+    --text-light: #f1f1f1;
+    --text-muted: #b5b5b5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #0e0e0e, #141414);
+    color: var(--text-light);
+}
+
+/* Header */
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+header span {
+    color: var(--accent);
+}
+
+header p {
+    margin-top: 15px;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px 80px;
+}
+
+/* Car Cards */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.car-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.car-content {
+    padding: 25px;
+}
+
+.car-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #222;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>G9RDV <span>Automotive</span></h1>
+    <p>
+        Precision automotive data and enthusiast-focused insights.
+        Showcasing performance, platforms, and design heritage of iconic vehicles.
+    </p>
+</header>
+
+<main>
+    <section class="car-grid">
+
+        <!-- Mercedes -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mercedes-Benz_E_220d_T-Modell_AMG_Line_%28S_213%29_IMG_3791.jpg" alt="Mercedes E220d Estate">
+            </div>
+            <div class="car-content">
+                <h2>2013 Mercedes-Benz E220d Estate</h2>
+
+                <div class="section-title">Performance</div>
+                <ul>
+                    <li>Engine: 2.1L Turbo Diesel (OM651)</li>
+                    <li>Power: ~170 hp</li>
+                    <li>Torque: ~400 Nm</li>
+                    <li>0–60 mph: ~8.4 seconds</li>
+                    <li>Top Speed: ~140 mph</li>
+                </ul>
+
+                <div class="section-title">Platform & Drivetrain</div>
+                <ul>
+                    <li>Platform: Mercedes-Benz W212</li>
+                    <li>Drivetrain: RWD</li>
+                    <li>Transmission: 7-Speed Automatic</li>
+                    <li>Body Style: Estate (Wagon)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Corolla Levin -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Toyota_Corolla_Levin_BZ-R_AE111.jpg" alt="Toyota Corolla Levin BZ-R">
+            </div>
+            <div class="car-content">
+                <h2>1997 Toyota Corolla Levin BZ-R</h2>
+
+                <div class="section-title">Performance</div>
+                <ul>
+                    <li>Engine: 1.6L 4A-GE 20V</li>
+                    <li>Power: ~165 hp</li>
+                    <li>Redline: 8,000 rpm</li>
+                    <li>0–60 mph: ~6.5 seconds</li>
+                    <li>Top Speed: ~140 mph</li>
+                </ul>
+
+                <div class="section-title">Platform & Drivetrain</div>
+                <ul>
+                    <li>Platform: AE111</li>
+                    <li>Drivetrain: FWD</li>
+                    <li>Transmission: 6-Speed Manual</li>
+                    <li>Body Style: Coupe</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Astra -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Vauxhall_Astra_G_GSi.jpg" alt="Vauxhall Astra GSi">
+            </div>
+            <div class="car-content">
+                <h2>2003 Vauxhall Astra GSi</h2>
+
+                <div class="section-title">Performance</div>
+                <ul>
+                    <li>Engine: 2.0L NA (Z20LET)</li>
+                    <li>Power: ~200 hp</li>
+                    <li>Torque: ~250 Nm</li>
+                    <li>0–60 mph: ~7.0 seconds</li>
+                    <li>Top Speed: ~150 mph</li>
+                </ul>
+
+                <div class="section-title">Platform & Drivetrain</div>
+                <ul>
+                    <li>Platform: Astra G</li>
+                    <li>Drivetrain: FWD</li>
+                    <li>Transmission: 6-Speed Manual</li>
+                    <li>Body Style: Hatchback</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    © 2026 G9RDV Automotive — Engineered Passion
+</footer>
+
+</body>
+</html>
 
